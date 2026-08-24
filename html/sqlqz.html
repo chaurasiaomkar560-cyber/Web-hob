@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(45deg, #fada61 0.000%, #ff9188 50.000%, #ff5acd 100.000%);
+
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border-radius: 20px;
+            background-color: #fff;
+            margin: 10px 0px;
+            box-shadow:
+                0 10px 25px rgba(255, 90, 205, 0.25),
+                0 5px 15px rgba(255, 145, 136, 0.20),
+                0 2px 8px rgba(250, 218, 97, 0.18);
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            margin: 9px 25px;
+        }
+
+        .options p {
+            margin: 0px 7px;
+        }
+
+        input[type="radio"] {
+            width: 20px;
+            height: 0.9rem;
+        }
+
+        input[type="radio"]:checked {
+            accent-color: black;
+        }
+
+        .def {
+            font-weight: 500;
+        }
+
+        @media (max-width:768px) {
+
+            h2 {
+                font-size: 0.9rem;
+            }
+
+            .opt {
+                font-size: 0.9rem;
+                font-weight: 490;
+            }
+
+            .b1 {
+                text-align: center;
+                margin: 25px 30px;
+                display: grid;
+                gap: 9px;
+                grid-template-rows: repeat(1fr, 1fr);
+            }
+        }
+
+        .b1 {
+            text-align: center;
+            margin: 25px 30px;
+
+        }
+
+        .b1 button {
+            padding: 18px 2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 10px;
+            border: none;
+
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #ff5acd;
+            box-shadow: 0 8px 20px rgba(255, 90, 205, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .b1 button:hover {
+
+            background-color: #ff5acd;
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(255, 90, 205, 0.5);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            font-family: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+
+
+           <div class="item" data-q="q1">
+    <h2 id="question">Q1) What does SQL stand for?</h2>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="Structured Query Language" required>
+        <p class="opt">Structured Query Language
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="Strong Question Language">
+        <p class="opt">Strong Question Language
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="Structured Question Layout">
+        <p class="opt">Structured Question Layout
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="Simple Query Language">
+        <p class="opt">Simple Query Language
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q2">
+    <h2 id="question">Q2) Which SQL statement is used to extract data from a database?</h2>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="EXTRACT" required>
+        <p class="opt">EXTRACT
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="GET">
+        <p class="opt">GET
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="SELECT">
+        <p class="opt">SELECT
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="OPEN">
+        <p class="opt">OPEN
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q3">
+    <h2 id="question">Q3) Which SQL statement is used to update data in a database?</h2>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="SAVE AS" required>
+        <p class="opt">SAVE AS
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="UPDATE">
+        <p class="opt">UPDATE
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="MODIFY">
+        <p class="opt">MODIFY
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="SAVE">
+        <p class="opt">SAVE
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q4">
+    <h2 id="question">Q4) Which SQL statement is used to delete data from a database?</h2>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="REMOVE" required>
+        <p class="opt">REMOVE
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="COLLAPSE">
+        <p class="opt">COLLAPSE
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="DELETE">
+        <p class="opt">DELETE
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="DROP">
+        <p class="opt">DROP
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q5">
+    <h2 id="question">Q5) With SQL, how do you select all the columns from a table named 'Persons'?</h2>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="SELECT [all] FROM Persons" required>
+        <p class="opt">SELECT [all] FROM Persons
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="SELECT Persons">
+        <p class="opt">SELECT Persons
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="SELECT * FROM Persons">
+        <p class="opt">SELECT * FROM Persons
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="SELECT Columns FROM Persons">
+        <p class="opt">SELECT Columns FROM Persons
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q6">
+    <h2 id="question">Q6) How do you select all the records from a table named 'Persons' where the value of the column 'FirstName' is 'Peter'?</h2>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="SELECT * FROM Persons WHERE FirstName='Peter'" required>
+        <p class="opt">SELECT * FROM Persons WHERE FirstName='Peter'
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="SELECT * FROM Persons WHERE FirstName LIKE 'Peter'">
+        <p class="opt">SELECT * FROM Persons WHERE FirstName LIKE 'Peter'
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="SELECT [all] FROM Persons WHERE FirstName='Peter'">
+        <p class="opt">SELECT [all] FROM Persons WHERE FirstName='Peter'
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="SELECT * FROM Persons LIKE FirstName='Peter'">
+        <p class="opt">SELECT * FROM Persons LIKE FirstName='Peter'
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q7">
+    <h2 id="question">Q7) Which keyword is used to return only distinct (different) values?</h2>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="DIFFERENT" required>
+        <p class="opt">DIFFERENT
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="UNIQUE">
+        <p class="opt">UNIQUE
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="DISTINCT">
+        <p class="opt">DISTINCT
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="COUNT">
+        <p class="opt">COUNT
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q8">
+    <h2 id="question">Q8) Which SQL keyword is used to sort the result-set?</h2>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="SORT BY" required>
+        <p class="opt">SORT BY
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="ORDER BY">
+        <p class="opt">ORDER BY
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="GROUP BY">
+        <p class="opt">GROUP BY
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="ALIGN BY">
+        <p class="opt">ALIGN BY
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q9">
+    <h2 id="question">Q9) How can you insert a new record into the 'Persons' table?</h2>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="INSERT INTO Persons VALUES ('Jimmy', 'Jackson')" required>
+        <p class="opt">INSERT INTO Persons VALUES ('Jimmy', 'Jackson')
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="INSERT Persons VALUES ('Jimmy', 'Jackson')">
+        <p class="opt">INSERT Persons VALUES ('Jimmy', 'Jackson')
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="INSERT NEW Persons ('Jimmy', 'Jackson')">
+        <p class="opt">INSERT NEW Persons ('Jimmy', 'Jackson')
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="ADD RECORD TO Persons VALUES ('Jimmy', 'Jackson')">
+        <p class="opt">ADD RECORD TO Persons VALUES ('Jimmy', 'Jackson')
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q10">
+    <h2 id="question">Q10) Which constraint uniquely identifies each record in a database table?</h2>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="FOREIGN KEY" required>
+        <p class="opt">FOREIGN KEY
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="UNIQUE KEY">
+        <p class="opt">UNIQUE KEY
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="PRIMARY KEY">
+        <p class="opt">PRIMARY KEY
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="NOT NULL">
+        <p class="opt">NOT NULL
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+            <div class="b1">
+                <Button type="submit">Submit</Button>
+                <button id="Close" type="button"> <a href="/html/quiz.html">Back</a></button>
+
+            </div>
+        </div>
+    </form>
+
+    <script>
+
+        let inp = document.querySelector(".container");
+        let form = document.querySelector("form");
+        let b1 = document.querySelector("#btn");
+        let count=0;
+
+        let userinp = {};
+
+        const correctAns = {
+            "q1": "Structured Query Language",
+            "q2": "SELECT",
+            "q3": "UPDATE",
+            "q4": "DELETE",
+            "q5": "SELECT * FROM Persons",
+            "q6": "SELECT * FROM Persons WHERE FirstName='Peter'",
+            "q7": "DISTINCT",
+            "q8": "ORDER BY",
+            "q9": "INSERT INTO Persons VALUES ('Jimmy', 'Jackson')",
+            "q10": "PRIMARY KEY"
+        };
+
+
+
+        form.addEventListener("change", function (event) {
+            const tar = event.target;
+
+            if (tar.type === "radio") {
+                userinp[tar.name] = tar.value;
+            }
+        });
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let items = document.querySelectorAll("input[type='radio']");
+
+            items.forEach(radio => { radio.setAttribute("disabled", "true") });
+
+            for (key in userinp) {
+
+                let questionno = document.querySelector(`.item[data-q="${key}"]`);
+                let def = questionno.querySelector(".def");
+
+
+
+
+                let usans = userinp[key];
+                let cans = correctAns[key];
+
+
+                let select = questionno.querySelector(`input[name="${key}"][value="${usans}"]`);
+                let emogi = select.parentElement.querySelector(".emogi");
+
+
+                if (usans === cans) {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "✅";
+                    count++;
+                } else {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "❌";
+
+                }
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

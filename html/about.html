@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- REPLACE BOTH OF YOUR OLD ICON LINKS WITH THIS ONE LINE -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav {
+            width: 100%;
+            height: 13vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: plum;
+            padding: 1.3rem 1.3rem;
+
+        }
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .brandname {
+            font-size: 2.3rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .nav .links {
+            display: flex;
+            font-size: 1.3rem;
+            gap: 2.5rem;
+
+
+        }
+
+        .links li {
+            list-style: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .links li:hover {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+
+
+        .side {
+            display: none;
+        }
+
+        .b1 button {
+            margin: 0px 1.9rem;
+            padding: 1rem 1.9rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .b1 button div .material-symbols-outlined {
+            font-size: 1.6rem;
+
+        }
+
+        .b1 button div p {
+            font-size: 1rem;
+
+        }
+
+        .b1 button:hover {
+            background: #d4cece;
+            color: #fff;
+        }
+
+        .sidebar {
+            display: none;
+        }
+
+        #ft {
+            background-color: black;
+            color: #fff;
+            width: 100%;
+            padding: 1.7rem;
+            font-size: 1.4rem;
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        #ft .cp {
+            text-align: center;
+        }
+
+        .footitems {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1.3rem;
+        }
+
+        .item li {
+            padding: 0.3rem;
+            margin-left: 2.9rem;
+            cursor: pointer;
+        }
+
+        .item h4 {
+            font-size: 2.3rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            font-family: inherit;
+        }
+
+
+
+        .main {
+            width: 100%;
+            min-height: 90vh;
+            background-color: aliceblue;
+
+            padding: 4rem 2rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* Main Introduction Card */
+
+        .intro-card {
+            width: 100%;
+            max-width: 1100px;
+
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+
+            padding: 3rem;
+
+            background: white;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.12);
+
+            border: 1px solid rgba(199, 105, 199, 0.15);
+        }
+
+
+        /* Founder Image */
+
+        .founder-image {
+            flex: 0 0 280px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .founder-image img {
+            width: 260px;
+            height: 260px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 8px solid rgb(199, 105, 199);
+
+            box-shadow:
+                0 10px 30px rgba(199, 105, 199, 0.35);
+        }
+
+
+
+
+        .founder-content {
+            flex: 1;
+        }
+
+        .intro-label {
+            display: inline-block;
+
+            color: rgb(170, 70, 170);
+
+            font-size: 0.9rem;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 0.8rem;
+        }
+
+        .founder-content h1 {
+            font-size: 2.5rem;
+            color: #222;
+
+            margin-bottom: 0.3rem;
+        }
+
+        .founder-content h1 span {
+            color: rgb(199, 105, 199);
+        }
+
+        .founder-content h2 {
+            font-size: 1.3rem;
+
+            color: #666;
+
+            margin-bottom: 1.3rem;
+
+            font-weight: 500;
+        }
+
+        .founder-content p {
+            font-size: 1.05rem;
+
+            line-height: 1.8;
+
+            color: #555;
+
+            margin-bottom: 1rem;
+        }
+
+        .founder-tag {
+            display: inline-block;
+
+            margin-top: 0.7rem;
+
+            padding: 10px 18px;
+
+            border-radius: 25px;
+
+            background: rgba(199, 105, 199, 0.12);
+
+            color: rgb(160, 65, 160);
+
+            font-weight: 600;
+        }
+
+         html::-webkit-scrollbar,
+            body::-webkit-scrollbar {
+                display: none;
+            }
+
+
+        @media (max-width:768px) {
+
+            .links li,
+            .b1 {
+                display: none;
+            }
+
+            .logo img {
+                width: 90px;
+            }
+
+            .brandname {
+                font-size: 1.7rem;
+                font-weight: 500;
+                color: white
+            }
+
+            .logo {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .side {
+                display: block;
+            }
+
+            .nav {
+                height: 10vh;
+                position: relative;
+            }
+
+            .side .material-symbols-outlined {
+                font-size: 2.6rem;
+                font-weight: 600;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            .sidebar {
+
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: #fff;
+                padding: 10px;
+            }
+
+            #close {
+                cursor: pointer;
+                font-size: 2.3rem;
+            }
+
+            .sidebar-links {
+                display: block;
+                margin-top: 20%;
+                text-align: center;
+
+            }
+
+            .sidebar-links li {
+                font-size: 2.3rem;
+                padding: 1.2rem 1.5rem;
+
+            }
+
+            .sidebar-links li:hover {
+                background-color: #837b7b;
+                color: #fff;
+                cursor: pointer;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+
+            #home,
+            #About,
+            #course,
+            #quiz,
+            #contact {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .material-symbols-outlined {
+                font-size: 2.5rem;
+                margin-top: 11px;
+                font-weight: 600;
+            }
+
+
+            .footitems {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 25px;
+            }
+
+            html::-webkit-scrollbar,
+            body::-webkit-scrollbar {
+                display: none;
+            }
+
+            .main {
+                padding: 2rem 1rem;
+            }
+
+            .intro-card {
+                flex-direction: column;
+
+                text-align: center;
+
+                gap: 1.5rem;
+
+                padding: 2rem 1.3rem;
+            }
+
+            .founder-image {
+                flex: none;
+            }
+
+            .founder-image img {
+                width: 180px;
+                height: 180px;
+
+                border-width: 6px;
+            }
+
+            .founder-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .founder-content h2 {
+                font-size: 1.1rem;
+            }
+
+            .founder-content p {
+                font-size: 0.95rem;
+
+                line-height: 1.7;
+
+                text-align: left;
+            }
+
+            .founder-tag {
+                font-size: 0.9rem;
+            }
+        }
+
+
+        @media (max-width: 1023px) {
+
+            .main {
+                padding: 3rem 1.5rem;
+            }
+
+            .intro-card {
+                gap: 2rem;
+                padding: 2rem;
+            }
+
+            .founder-image {
+                flex: 0 0 220px;
+            }
+
+            .founder-image img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .founder-content h1 {
+                font-size: 2rem;
+            }
+
+            .founder-content p {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .main {
+                padding: 1.2rem 0.7rem;
+            }
+
+            .intro-card {
+                padding: 1.5rem 1rem;
+
+                border-radius: 18px;
+            }
+
+            .founder-image img {
+                width: 145px;
+                height: 145px;
+            }
+
+            .founder-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .founder-content h2 {
+                font-size: 1rem;
+            }
+
+            .founder-content p {
+                font-size: 0.9rem;
+            }
+
+            .intro-label {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="/Source/images/logo.png" alt="logo">
+            <p class="brandname">WEB-HOB</p>
+        </div>
+        <div class="links">
+            <li><a href="/html/index.html">Home</a></li>
+            <li><a href="/html/about.html">About</a></li>
+            <li><a href="/html/Course.html">Courses</a></li>
+            <li><a href="/html/quiz.html">Quiz</a></li>
+            
+        </div>
+        <div class="b1">
+            <button>
+                <div>
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+                <div>
+                    <a href="/html/user.html">
+                    <p>User Profile</p>
+                    </a>
+                </div>
+            </button>
+        </div>
+        <div class="side">
+            <span class="material-symbols-outlined" id="menu">
+                menu
+            </span>
+        </div>
+    </div>
+
+    <aside class="sidebar">
+        <span class="material-symbols-outlined close-btn" id="close">close</span>
+        <ul class="sidebar-links">
+            <li id="home">
+                <div> <span class="material-symbols-outlined">Home</span></div>
+                <div>
+                    <p><a href="/html/index.html">Home</a></p>
+                </div>
+            </li>
+            <li id="About">
+                <div> <span class="material-symbols-outlined">info</span></div>
+                <div>
+                    <p><a href="/html/about.html">About</a></p>
+                </div>
+            </li>
+            <li id="course">
+                <div> <span class="material-symbols-outlined">School</span></div>
+                <div>
+                    <p><a href="/html/Course.html">Courses</a></p>
+                </div>
+            </li>
+
+
+            <li id="quiz">
+                <div> <span class="material-symbols-outlined">quiz</span></div>
+                <div>
+                    <p><a href="/html/quiz.html">Quiz</a></p>
+                </div>
+            </li>
+
+        </ul>
+    </aside>
+
+
+
+    <div class="intro-card">
+
+        <div class="founder-image">
+            <img src="/Source/images/intro.jpg" alt="Omkar Chaurasia - Founder of WEB-HOB">
+        </div>
+
+        <div class="founder-content">
+
+            <span class="intro-label">ABOUT WEB-HOB</span>
+
+            <h1>Hi, I'm <span>Omkar Chaurasia</span></h1>
+
+            <h2>Founder of WEB-HOB</h2>
+
+            <p>
+                WEB-HOB is an educational platform founded by Omkar Chaurasia
+                with the aim of making programming and web development learning
+                simple, practical, and accessible for students and beginners.
+                The platform provides learning resources, practical examples,
+                and interactive quizzes to help users understand concepts,
+                practice their knowledge, identify their strengths and weaknesses,
+                and improve their technical skills.
+            </p>
+
+            <p>
+                WEB-HOB covers technologies and subjects including
+                HTML, CSS, JavaScript, Java, Python, C++, SQL, MongoDB,
+                and Computer Networks. Whether you are starting your programming
+                journey, preparing for academics, revising concepts, or testing
+                your knowledge through quizzes, WEB-HOB is designed to provide
+                a simple and engaging learning experience.
+            </p>
+
+            <div class="founder-tag">
+                Learn • Practice • Improve
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer id="ft">
+        <div class="cp">
+            <h3>WEB-HOB</h3>
+            <p>Your ultimate destination for interactive learning, expert-led courses, and knowledge testing. Elevate
+                your skills with us.</p>
+        </div>
+
+        <div class="footitems">
+            <div class="item">
+                <ul>
+                    <h4>Links</h4>
+                    <li><a href="/html/index.html">Home</a></li>
+                    <li><a href="/html/about.html">About</a></li>
+                    <li><a href="/html/Course.html">Courses</a></li>
+                    <li><a href="/html/quiz.html">Quiz</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div><a href="/html/Course.html"></a>
+            <div class="item">
+                <ul>
+                    <h4>Learnings</h4>
+                    <li><a href="/html/Course.html">HTML</a></li>
+                    <li><a href="/html/Course.html">CSS</a></li>
+                    <li><a href="/html/Course.html">JavaScript</a></li>
+                    <li><a href="/html/Course.html">Python</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <ul>
+                    <h4>Quick Actions</h4>
+                    <li>Support</li>
+                    <li>FAQ</li>
+                    <li>Contact</li>
+                    <li>Follow us</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cp">
+            <p>&copy; 2026 WEB-HOB. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <script>
+        let menu = document.querySelector("#menu");
+        let close = document.querySelector("#close");
+        let sidebar = document.querySelector(".sidebar");
+
+        menu.addEventListener("click", function () {
+            sidebar.style.display = "block";
+        });
+
+        close.addEventListener("click", function () {
+            sidebar.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-HOB | Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: azure;
+            padding: 30px
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, .95);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, .12);
+            border: 1px solid #e5e7eb
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 30px
+        }
+
+        .heading h1 {
+            font-size: 2rem;
+            background: rgb(220, 129, 220);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 8px
+        }
+
+        .heading p {
+            color: #64748b;
+            font-size: .95rem
+        }
+
+        .form-group {
+            margin-bottom: 20px
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: .95rem;
+            font-weight: 600;
+            color: #374151
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"] {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            outline: none;
+            font-size: 1rem;
+            transition: .3s;
+            background: #fff
+        }
+
+        input:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, .12)
+        }
+
+        .gender-options {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 8px
+        }
+
+        .gender-option {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            cursor: pointer;
+            color: #4b5563
+        }
+
+        .gender-option input {
+            accent-color: #4f46e5;
+            cursor: pointer
+        }
+
+        .error {
+            display: block;
+            color: #dc2626;
+            font-size: .82rem;
+            margin-top: 5px;
+            min-height: 18px
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            background: rgb(220, 129, 220);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s
+        }
+
+        input[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, .25)
+        }
+
+        @media(max-width:500px) {
+            body {
+                padding: 15px
+            }
+
+            .container {
+                padding: 25px 20px
+            }
+
+            .heading h1 {
+                font-size: 1.7rem
+            }
+
+            .gender-options {
+                flex-direction: column;
+                gap: 10px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Create Your Account</h1>
+            <p>Join WEB-HOB and start your learning journey.</p>
+        </div>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name">
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass" placeholder="Enter your password">
+                <span class="error" id="passError"></span>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="gender-options">
+                    <label class="gender-option"><input type="radio" name="gen" value="Male">Male</label>
+                    <label class="gender-option"><input type="radio" name="gen" value="Female">Female</label>
+                    <label class="gender-option"><input type="radio" name="gen" value="Other">Other</label>
+                </div>
+                <span class="error" id="genderError"></span>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" placeholder="Enter your age">
+                <span class="error" id="ageError"></span>
+            </div>
+            <input type="submit" value="Create Account">
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector("#registerForm");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            document.querySelector("#nameError").textContent = "";
+            document.querySelector("#emailError").textContent = "";
+            document.querySelector("#passError").textContent = "";
+            document.querySelector("#genderError").textContent = "";
+            document.querySelector("#ageError").textContent = "";
+
+            let name = document.querySelector("#name").value.trim();
+            let email = document.querySelector("#email").value.trim();
+            let password = document.querySelector("#pass").value;
+            let age = document.querySelector("#age").value.trim();
+            let gender = document.querySelector('input[name="gen"]:checked');
+            let valid = true;
+
+            if (name === "") {
+                document.querySelector("#nameError").textContent = "Name cannot be empty.";
+                valid = false;
+            } else if (!/^[A-Za-z ]+$/.test(name)) {
+                document.querySelector("#nameError").textContent = "Name should contain only letters.";
+                valid = false;
+            }
+
+            if (email === "") {
+                document.querySelector("#emailError").textContent = "Email cannot be empty.";
+                valid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.querySelector("#emailError").textContent = "Enter a valid email address.";
+                valid = false;
+            }
+
+            if (password === "") {
+                document.querySelector("#passError").textContent = "Password cannot be empty.";
+                valid = false;
+            } else if (password.length < 8) {
+                document.querySelector("#passError").textContent = "Password must contain at least 8 characters.";
+                valid = false;
+            } else if (!/^[A-Z]/.test(password)) {
+                document.querySelector("#passError").textContent = "Password must start with a capital letter.";
+                valid = false;
+            } else if (!/[0-9]/.test(password)) {
+                document.querySelector("#passError").textContent = "Password must contain at least one digit.";
+                valid = false;
+            } else if (!/[!@#$%^&*(),.?":{}|<>\-+=/\\[\]_]/.test(password)) {
+                document.querySelector("#passError").textContent = "Password must contain at least one special character.";
+                valid = false;
+            }
+
+            if (!gender) {
+                document.querySelector("#genderError").textContent = "Please select your gender.";
+                valid = false;
+            }
+
+            if (age === "") {
+                document.querySelector("#ageError").textContent = "Age cannot be empty.";
+                valid = false;
+            } else if (Number(age) < 13 || Number(age) > 100) {
+                document.querySelector("#ageError").textContent = "Please enter a valid age.";
+                valid = false;
+            }
+
+            if (valid) {
+                let users = JSON.parse(localStorage.getItem("users")) || [];
+
+                let existingUser = users.find(function (user) {
+                    return user.email.toLowerCase() === email.toLowerCase();
+                });
+
+                if (existingUser) {
+                    document.querySelector("#emailError").textContent = "An account with this email already exists.";
+                    return;
+                }
+
+                let user = {
+                    name: name,
+                    email: email,
+                    password: password,
+                    gender: gender.value,
+                    age: Number(age)
+                };
+
+                users.push(user);
+
+                localStorage.setItem("users", JSON.stringify(users));
+
+                form.reset();
+
+                window.location.href = "/html/login.html";
+            }
+        });
+    </script>
+</body>
+
+</html>

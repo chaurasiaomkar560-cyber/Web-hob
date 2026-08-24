@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(45deg, #fada61 0.000%, #ff9188 50.000%, #ff5acd 100.000%);
+
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border-radius: 20px;
+            background-color: #fff;
+            margin: 10px 0px;
+            box-shadow:
+                0 10px 25px rgba(255, 90, 205, 0.25),
+                0 5px 15px rgba(255, 145, 136, 0.20),
+                0 2px 8px rgba(250, 218, 97, 0.18);
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            margin: 9px 25px;
+        }
+
+        .options p {
+            margin: 0px 7px;
+        }
+
+        input[type="radio"] {
+            width: 20px;
+            height: 0.9rem;
+        }
+
+        input[type="radio"]:checked {
+            accent-color: black;
+        }
+
+        .def {
+            font-weight: 500;
+        }
+
+        @media (max-width:768px) {
+
+            h2 {
+                font-size: 0.9rem;
+            }
+
+            .opt {
+                font-size: 0.9rem;
+                font-weight: 490;
+            }
+
+            .b1 {
+                text-align: center;
+                margin: 25px 30px;
+                display: grid;
+                gap: 9px;
+                grid-template-rows: repeat(1fr, 1fr);
+            }
+        }
+
+        .b1 {
+            text-align: center;
+            margin: 25px 30px;
+
+        }
+
+        .b1 button {
+            padding: 18px 2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 10px;
+            border: none;
+
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #ff5acd;
+            box-shadow: 0 8px 20px rgba(255, 90, 205, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .b1 button:hover {
+
+            background-color: #ff5acd;
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(255, 90, 205, 0.5);
+        }
+         a {
+            text-decoration: none;
+            color: inherit;
+            font-family: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+
+
+           <div class="item" data-q="q1">
+    <h2 id="question">Q1) What is the correct file extension for Python files?</h2>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value=".pt" required>
+        <p class="opt">.pt
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value=".py">
+        <p class="opt">.py
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value=".pyt">
+        <p class="opt">.pyt
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value=".python">
+        <p class="opt">.python
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q2">
+    <h2 id="question">Q2) What will be the output of this Python code?<br>print(type(1 / 2))</h2>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="&lt;class 'int'&gt;" required>
+        <p class="opt">&lt;class 'int'&gt;
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="&lt;class 'float'&gt;">
+        <p class="opt">&lt;class 'float'&gt;
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="&lt;class 'double'&gt;">
+        <p class="opt">&lt;class 'double'&gt;
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="0">
+        <p class="opt">0
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q3">
+    <h2 id="question">Q3) Guess the output of this slice operation:<br>my_list = [1, 2, 3, 4, 5]<br>print(my_list[1:4])</h2>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="[1, 2, 3]" required>
+        <p class="opt">[1, 2, 3]
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="[2, 3, 4]">
+        <p class="opt">[2, 3, 4]
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="[2, 3, 4, 5]">
+        <p class="opt">[2, 3, 4, 5]
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="[1, 2, 3, 4]">
+        <p class="opt">[1, 2, 3, 4]
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q4">
+    <h2 id="question">Q4) What will be printed by this code?<br>def func(x=[]):<br>&nbsp;&nbsp;&nbsp;&nbsp;x.append(1)<br>&nbsp;&nbsp;&nbsp;&nbsp;return x<br>print(func(), func())</h2>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="[1] [1]" required>
+        <p class="opt">[1] [1]
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="[1] [1, 1]">
+        <p class="opt">[1] [1, 1]
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="[1] []">
+        <p class="opt">[1] []
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="Error">
+        <p class="opt">Error
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q5">
+    <h2 id="question">Q5) How do you create a variable with the numeric value 5 in Python?</h2>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="int x = 5" required>
+        <p class="opt">int x = 5
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="x = 5">
+        <p class="opt">x = 5
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="x = int(5)">
+        <p class="opt">x = int(5)
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="Both x = 5 and x = int(5) are correct">
+        <p class="opt">Both x = 5 and x = int(5) are correct
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q6">
+    <h2 id="question">Q6) Which keyword is used to create a function in Python?</h2>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="function" required>
+        <p class="opt">function
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="def">
+        <p class="opt">def
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="fun">
+        <p class="opt">fun
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="define">
+        <p class="opt">define
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q7">
+    <h2 id="question">Q7) Which collection type in Python is ordered, changeable, and allows duplicate members?</h2>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="List" required>
+        <p class="opt">List
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="Tuple">
+        <p class="opt">Tuple
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="Set">
+        <p class="opt">Set
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="Dictionary">
+        <p class="opt">Dictionary
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q8">
+    <h2 id="question">Q8) How do you start a 'for' loop in Python?</h2>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="for x in y:" required>
+        <p class="opt">for x in y:
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="for x key in y">
+        <p class="opt">for x key in y
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="for each x in y:">
+        <p class="opt">for each x in y:
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="for (x=0; x&lt;y; x++)">
+        <p class="opt">for (x=0; x&lt;y; x++)
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q9">
+    <h2 id="question">Q9) Which method can be used to remove any whitespace from both the beginning and the end of a string?</h2>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="len()" required>
+        <p class="opt">len()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="strip()">
+        <p class="opt">strip()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="ptrim()">
+        <p class="opt">ptrim()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="replace()">
+        <p class="opt">replace()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q10">
+    <h2 id="question">Q10) How do you write a comment in Python?</h2>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="// This is a comment" required>
+        <p class="opt">// This is a comment
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="/* This is a comment */">
+        <p class="opt">/* This is a comment */
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="# This is a comment">
+        <p class="opt"># This is a comment
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="&lt;!-- This is a comment --&gt;">
+        <p class="opt">&lt;!-- This is a comment --&gt;
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+            <div class="b1">
+                <Button type="submit">Submit</Button>
+                <button id="Close" type="button"> <a href="/html/quiz.html">Back</a></button>
+
+            </div>
+        </div>
+    </form>
+
+    <script>
+
+        let inp = document.querySelector(".container");
+        let form = document.querySelector("form");
+        let b1 = document.querySelector("#btn");
+
+        let userinp = {};
+
+        const correctAns = {
+            "q1": ".py",
+            "q2": "<class 'float'>",
+            "q3": "[2, 3, 4]",
+            "q4": "[1] [1, 1]",
+            "q5": "Both x = 5 and x = int(5) are correct",
+            "q6": "def",
+            "q7": "List",
+            "q8": "for x in y:",
+            "q9": "strip()",
+            "q10": "# This is a comment"
+        };
+
+
+
+        form.addEventListener("change", function (event) {
+            const tar = event.target;
+
+            if (tar.type === "radio") {
+                userinp[tar.name] = tar.value;
+            }
+        });
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let items = document.querySelectorAll("input[type='radio']");
+
+            items.forEach(radio => { radio.setAttribute("disabled", "true") });
+
+            for (key in userinp) {
+
+                let questionno = document.querySelector(`.item[data-q="${key}"]`);
+                let def = questionno.querySelector(".def");
+
+
+
+
+                let usans = userinp[key];
+                let cans = correctAns[key];
+
+
+                let select = questionno.querySelector(`input[name="${key}"][value="${usans}"]`);
+                let emogi = select.parentElement.querySelector(".emogi");
+
+
+                if (usans === cans) {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "✅";
+                } else {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "❌";
+
+                }
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

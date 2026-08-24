@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(45deg, #fada61 0.000%, #ff9188 50.000%, #ff5acd 100.000%);
+
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border-radius: 20px;
+            background-color: #fff;
+            margin: 10px 0px;
+            box-shadow:
+                0 10px 25px rgba(255, 90, 205, 0.25),
+                0 5px 15px rgba(255, 145, 136, 0.20),
+                0 2px 8px rgba(250, 218, 97, 0.18);
+        }
+
+         a {
+            text-decoration: none;
+            color: inherit;
+            font-family: inherit;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            margin: 9px 25px;
+        }
+
+        .options p {
+            margin: 0px 7px;
+        }
+
+        input[type="radio"] {
+            width: 20px;
+            height: 0.9rem;
+        }
+
+        input[type="radio"]:checked {
+            accent-color: black;
+        }
+
+        .def {
+            font-weight: 500;
+        }
+
+        @media (max-width:768px) {
+
+            h2 {
+                font-size: 0.9rem;
+            }
+
+            .opt {
+                font-size: 0.9rem;
+                font-weight: 490;
+            }
+
+            .b1 {
+                text-align: center;
+                margin: 25px 30px;
+                display: grid;
+                gap: 9px;
+                grid-template-rows: repeat(1fr, 1fr);
+            }
+        }
+
+        .b1 {
+            text-align: center;
+            margin: 25px 30px;
+
+        }
+
+        .b1 button {
+            padding: 18px 2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 10px;
+            border: none;
+
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #ff5acd;
+            box-shadow: 0 8px 20px rgba(255, 90, 205, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .b1 button:hover {
+
+            background-color: #ff5acd;
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(255, 90, 205, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+
+
+          <div class="item" data-q="q1">
+    <h2 id="question">Q1) Which data type is used to create a variable that should store text in C++ ?</h2>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="string" required>
+        <p class="opt">string
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="txt">
+        <p class="opt">txt
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="String">
+        <p class="opt">String
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="myString">
+        <p class="opt">myString
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q2">
+    <h2 id="question">Q2) What is the output of this C++ code snippet?<br>int x = 5;<br>int y = 2;<br>cout &lt;&lt; x / y;</h2>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="2.5" required>
+        <p class="opt">2.5
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="2">
+        <p class="opt">2
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="3">
+        <p class="opt">3
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="Compiler Error">
+        <p class="opt">Compiler Error
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q3">
+    <h2 id="question">Q3) Predict the output:<br>&nbsp;  int a = 10;<br>&nbsp; int* p = &amp;a;<br>&nbsp; *p = 20;<br>&nbsp; cout &lt;&lt; a;</h2>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="10" required>
+        <p class="opt">10
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="Address of a">
+        <p class="opt">Address of a
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="20">
+        <p class="opt">20
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="Garbage value">
+        <p class="opt">Garbage value
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q4">
+    <h2 id="question">Q4) What will this print?<br>int i = 0;<br>do {<br>&nbsp;&nbsp;i++;<br>} while(i &lt; 0);<br>cout &lt;&lt; i;</h2>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="0" required>
+        <p class="opt">0
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="1">
+        <p class="opt">1
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="Infinite Loop">
+        <p class="opt">Infinite Loop
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="Compiler Error">
+        <p class="opt">Compiler Error
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q5">
+    <h2 id="question">Q5) Which operator is used to dynamic allocate memory in C++?</h2>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="malloc" required>
+        <p class="opt">malloc
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="alloc">
+        <p class="opt">alloc
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="new">
+        <p class="opt">new
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="pointer">
+        <p class="opt">pointer
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q6">
+    <h2 id="question">Q6) Which access specifier makes class members accessible only within the class and its subclasses?</h2>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="public" required>
+        <p class="opt">public
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="private">
+        <p class="opt">private
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="protected">
+        <p class="opt">protected
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="internal">
+        <p class="opt">internal
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q7">
+    <h2 id="question">Q7) What is a correct constructor definition for a class named 'Car'?</h2>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="void Car()" required>
+        <p class="opt">void Car()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="Car()">
+        <p class="opt">Car()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="new Car()">
+        <p class="opt">new Car()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="constructor Car()">
+        <p class="opt">constructor Car()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q8">
+    <h2 id="question">Q8) Which header file allows us to use 'cin' and 'cout'?</h2>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="&lt;stdio.h&gt;" required>
+        <p class="opt">&lt;stdio.h&gt;
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="&lt;iostream&gt;">
+        <p class="opt">&lt;iostream&gt;
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="&lt;conio.h&gt;">
+        <p class="opt">&lt;conio.h&gt;
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="&lt;string&gt;">
+        <p class="opt">&lt;string&gt;
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q9">
+    <h2 id="question">Q9) Which keyword is used to handle exceptions in C++?</h2>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="catch" required>
+        <p class="opt">catch
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="try">
+        <p class="opt">try
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="throw">
+        <p class="opt">throw
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="except">
+        <p class="opt">except
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q10">
+    <h2 id="question">Q10) What wraps data and functions into a single unit called a class?</h2>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="Polymorphism" required>
+        <p class="opt">Polymorphism
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="Abstraction">
+        <p class="opt">Abstraction
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="Encapsulation">
+        <p class="opt">Encapsulation
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="Inheritance">
+        <p class="opt">Inheritance
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+            <div class="b1">
+                <Button type="submit">Submit</Button>
+                <button id="Close" type="button">  <a href="/html/quiz.html">Back</a></button>
+
+            </div>
+        </div>
+    </form>
+
+    <script>
+
+        let inp = document.querySelector(".container");
+        let form = document.querySelector("form");
+        let b1 = document.querySelector("#btn");
+
+        let userinp = {};
+
+        const correctAns = {
+            "q1": "string",
+            "q2": "2",
+            "q3": "20",
+            "q4": "1",
+            "q5": "new",
+            "q6": "protected",
+            "q7": "Car()",
+            "q8": "<iostream>",
+            "q9": "try",
+            "q10": "Encapsulation"
+        };
+
+
+
+        form.addEventListener("change", function (event) {
+            const tar = event.target;
+
+            if (tar.type === "radio") {
+                userinp[tar.name] = tar.value;
+            }
+        });
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let items = document.querySelectorAll("input[type='radio']");
+
+            items.forEach(radio => { radio.setAttribute("disabled", "true") });
+
+            for (key in userinp) {
+
+                let questionno = document.querySelector(`.item[data-q="${key}"]`);
+                let def = questionno.querySelector(".def");
+
+
+
+
+                let usans = userinp[key];
+                let cans = correctAns[key];
+
+
+                let select = questionno.querySelector(`input[name="${key}"][value="${usans}"]`);
+                let emogi = select.parentElement.querySelector(".emogi");
+
+
+                if (usans === cans) {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "✅";
+                } else {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "❌";
+
+                }
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

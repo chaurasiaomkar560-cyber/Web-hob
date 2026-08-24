@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(45deg, #fada61 0.000%, #ff9188 50.000%, #ff5acd 100.000%);
+
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border-radius: 20px;
+            background-color: #fff;
+            margin: 10px 0px;
+            box-shadow:
+                0 10px 25px rgba(255, 90, 205, 0.25),
+                0 5px 15px rgba(255, 145, 136, 0.20),
+                0 2px 8px rgba(250, 218, 97, 0.18);
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            margin: 9px 25px;
+        }
+
+         a {
+            text-decoration: none;
+            color: inherit;
+            font-family: inherit;
+        }
+
+        .options p {
+            margin: 0px 7p
+        }
+
+        input[type="radio"] {
+            width: 20px;
+            height: 0.9rem;
+        }
+
+        input[type="radio"]:checked {
+            accent-color: black;
+        }
+
+        .def {
+            font-weight: 500;
+        }
+
+        @media (max-width:768px) {
+
+            h2 {
+                font-size: 0.9rem;
+            }
+
+            .opt {
+                font-size: 0.9rem;
+                font-weight: 490;
+            }
+
+            .b1 {
+                text-align: center;
+                margin: 25px 30px;
+                display: grid;
+                gap: 9px;
+                grid-template-rows: repeat(1fr, 1fr);
+            }
+        }
+
+        .b1 {
+            text-align: center;
+            margin: 25px 30px;
+
+        }
+
+        .b1 button {
+            padding: 18px 2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 10px;
+            border: none;
+
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #ff5acd;
+            box-shadow: 0 8px 20px rgba(255, 90, 205, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .b1 button:hover {
+
+            background-color: #ff5acd;
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(255, 90, 205, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+
+
+            <div class="item" data-q="q1">
+    <h2 id="question">Q1) What type of database is MongoDB?</h2>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="Relational" required>
+        <p class="opt">Relational
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="NoSQL Document-based">
+        <p class="opt">NoSQL Document-based
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="Graph-based">
+        <p class="opt">Graph-based
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="Key-Value store">
+        <p class="opt">Key-Value store
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q2">
+    <h2 id="question">Q2) In MongoDB, what format is used to store data records?</h2>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="XML" required>
+        <p class="opt">XML
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="SQL Tables">
+        <p class="opt">SQL Tables
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="BSON (Binary JSON)">
+        <p class="opt">BSON (Binary JSON)
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="CSV">
+        <p class="opt">CSV
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q3">
+    <h2 id="question">Q3) What is a 'row' in a SQL table equivalent to in a MongoDB collection?</h2>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="Field" required>
+        <p class="opt">Field
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="Document">
+        <p class="opt">Document
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="Database">
+        <p class="opt">Database
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="Index">
+        <p class="opt">Index
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q4">
+    <h2 id="question">Q4) Which command is used to display all the databases in MongoDB?</h2>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="show dbs" required>
+        <p class="opt">show dbs
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="view databases">
+        <p class="opt">view databases
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="display dbs">
+        <p class="opt">display dbs
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="list databases">
+        <p class="opt">list databases
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q5">
+    <h2 id="question">Q5) Which method is used to insert a single document into a collection?</h2>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="db.collection.add()" required>
+        <p class="opt">db.collection.add()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="db.collection.insert()">
+        <p class="opt">db.collection.insert()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="db.collection.insertOne()">
+        <p class="opt">db.collection.insertOne()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="db.collection.save()">
+        <p class="opt">db.collection.save()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q6">
+    <h2 id="question">Q6) Which method is used to retrieve documents from a collection?</h2>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="db.collection.get()" required>
+        <p class="opt">db.collection.get()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="db.collection.find()">
+        <p class="opt">db.collection.find()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="db.collection.fetch()">
+        <p class="opt">db.collection.fetch()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="db.collection.select()">
+        <p class="opt">db.collection.select()
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q7">
+    <h2 id="question">Q7) What is the primary purpose of the '_id' field in MongoDB?</h2>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="To store password" required>
+        <p class="opt">To store password
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="To act as a unique primary key">
+        <p class="opt">To act as a unique primary key
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="To index text data">
+        <p class="opt">To index text data
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="To count documents">
+        <p class="opt">To count documents
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q8">
+    <h2 id="question">Q8) Which operator is used for a 'Greater Than' comparison query?</h2>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="$gt" required>
+        <p class="opt">$gt
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="$greater">
+        <p class="opt">$greater
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="$g">
+        <p class="opt">$g
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="$gte">
+        <p class="opt">$gte
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q9">
+    <h2 id="question">Q9) Which framework is used in MongoDB to process data records and return computed results?</h2>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="Indexing Framework" required>
+        <p class="opt">Indexing Framework
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="Aggregation Framework">
+        <p class="opt">Aggregation Framework
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="Sharding Framework">
+        <p class="opt">Sharding Framework
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="Replication Framework">
+        <p class="opt">Replication Framework
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q10">
+    <h2 id="question">Q10) What is the process of storing data across multiple machines called in MongoDB?</h2>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="Replication" required>
+        <p class="opt">Replication
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="Indexing">
+        <p class="opt">Indexing
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="Sharding">
+        <p class="opt">Sharding
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="Aggregation">
+        <p class="opt">Aggregation
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+            <div class="b1">
+                <Button type="submit">Submit</Button>
+                <button id="Close" type="button">  <a href="/html/quiz.html">Back</a></button>
+
+            </div>
+        </div>
+    </form>
+
+    <script>
+
+        let inp = document.querySelector(".container");
+        let form = document.querySelector("form");
+        let b1 = document.querySelector("#btn");
+
+        let userinp = {};
+
+        const correctAns = {
+            "q1": "NoSQL Document-based",
+            "q2": "BSON (Binary JSON)",
+            "q3": "Document",
+            "q4": "show dbs",
+            "q5": "db.collection.insertOne()",
+            "q6": "db.collection.find()",
+            "q7": "To act as a unique primary key",
+            "q8": "$gt",
+            "q9": "Aggregation Framework",
+            "q10": "Sharding"
+        };
+
+
+
+        form.addEventListener("change", function (event) {
+            const tar = event.target;
+
+            if (tar.type === "radio") {
+                userinp[tar.name] = tar.value;
+            }
+        });
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let items = document.querySelectorAll("input[type='radio']");
+
+            items.forEach(radio => { radio.setAttribute("disabled", "true") });
+
+            for (key in userinp) {
+
+                let questionno = document.querySelector(`.item[data-q="${key}"]`);
+                let def = questionno.querySelector(".def");
+
+
+
+
+                let usans = userinp[key];
+                let cans = correctAns[key];
+
+
+                let select = questionno.querySelector(`input[name="${key}"][value="${usans}"]`);
+                let emogi = select.parentElement.querySelector(".emogi");
+
+
+                if (usans === cans) {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "✅";
+                } else {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "❌";
+
+                }
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

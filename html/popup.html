@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,body{
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:azure;
+        }
+
+        .b1{
+            padding: 3vw 5vw;
+            font-size: 1.2rem;
+            border-radius: 12%;
+            color: greenyellow;
+            border: 2px solid greenyellow;
+            background-color: azure;
+        }
+
+        .b1:hover{
+            color: black;
+            background-color: greenyellow;
+            cursor: pointer;
+        }
+
+        .mydialog{
+            padding: 5vw;
+            border-radius: 10px;
+            background-color: #fffF;
+            display:none;
+        }
+
+        .btn{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 7px;
+            margin: 10px 0px;
+        }
+
+        .b2,.b3{
+            padding: 9px 0px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2em;
+            background-color: blue;
+            border: none;
+        }
+
+        .b2:hover , .b3:hover{
+            background-color: rgb(2, 2, 142);
+        }
+
+        @media (max-width:768px){
+            .b1{
+                transform: scale(1.2);
+            }
+
+            .mydialog{
+                margin:0px 9px;
+            }
+
+              .b2:hover , .b3:hover{
+            background-color: rgb(2, 2, 142);
+        }
+
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    
+        <button class="b1">Sign-up</button> 
+    <div class="mydialog">
+        <h2>Please Proceed with the signup</h2>
+        <div class="btn">
+        <button class="b2">Sign-up</button>
+        <button class="b3">Close</button>
+        </div>
+
+        
+
+    </div>
+    <script>
+        let btn=document.querySelector(".b1");
+        let bd=document.querySelector("body");
+        let dialog=document.querySelector(".mydialog");
+        let b2=document.querySelector(".b3");
+
+        btn.addEventListener("click",function(){
+            bd.style.backgroundColor="rgb(162, 175, 187)";
+            dialog.style.display="block";
+            btn.style.display="none";
+
+        });
+
+        b2.addEventListener("click",()=>{
+            bd.style.backgroundColor="azure";
+            dialog.style.display="none";
+            btn.style.display="block";
+        });
+
+
+    </script>
+</body>
+</html>

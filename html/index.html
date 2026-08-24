@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- REPLACE BOTH OF YOUR OLD ICON LINKS WITH THIS ONE LINE -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        
+
+        .nav {
+            width: 100%;
+            height: 13vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: plum;
+            padding: 1.3rem 1.3rem;
+
+        }
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .brandname {
+            font-size: 2.3rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .nav .links {
+            display: flex;
+            font-size: 1.3rem;
+            gap: 2.5rem;
+
+
+        }
+
+        .links li {
+            list-style: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .links li:hover {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        
+
+        .side {
+            display: none;
+        }
+
+        .b1 button {
+            margin: 0px 1.9rem;
+            padding: 1rem 1.9rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .b1 button div .material-symbols-outlined {
+            font-size: 1.6rem;
+
+        }
+
+        .b1 button div p {
+            font-size: 1rem;
+
+        }
+
+        .b1 button:hover {
+            background: #d4cece;
+            color: #fff;
+        }
+
+        .sidebar {
+            display: none;
+        }
+
+        #ft {
+            background-color: black;
+            color: #fff;
+            width: 100%;
+            padding: 1.7rem;
+            font-size: 1.4rem;
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        #ft .cp {
+            text-align: center;
+        }
+
+        .footitems {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1.3rem;
+        }
+
+        .item li {
+            padding: 0.3rem;
+            margin-left: 2.9rem;
+            cursor: pointer;
+        }
+
+        .item h4 {
+            font-size: 2.3rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            font-family: inherit;
+        }
+
+
+
+        
+
+        :root {
+    --primary-color: #0070f3;
+    --primary-hover: #0051b3;
+    --text-dark: #111111;
+    --text-muted: #555555;
+    --bg-light: #fafafa;
+}
+
+.main {
+    width: 100%;
+    min-height: 90vh; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    box-sizing: border-box;
+    background: var(--bg-light);
+    gap: 40px;
+    background-color: rgb(245, 250, 253);
+}
+
+.main .left {
+    flex: 1;
+    max-width: 550px;
+}
+
+.main .left h1 {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin: 0 0 1.5rem 0;
+}
+
+
+.main .left h1 span {
+    color: rgb(250, 158, 250);
+    position: relative;
+}
+
+.main .left p {
+    font-family: system-ui, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin: 0 0 2.5rem 0;
+}
+
+
+.main .left button {
+    background-color: rgb(254, 150, 254);
+    color: #ffffff;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 2.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgb(220, 129, 220);
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.main .left button:hover {
+    background-color: rgb(220, 129, 220);
+    box-shadow: 0 6px 20px rgb(220, 129, 220);
+    transform: translateY(-2px);
+}
+
+.main .left button:active {
+    transform: translateY(0);
+}
+
+.main .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main .right img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); 
+}
+
+
+        @media (max-width:768px) {
+
+            .links li,
+            .b1 {
+                display: none;
+            }
+
+            .logo img {
+                width: 90px;
+            }
+
+            .brandname {
+                font-size: 1.7rem;
+                font-weight: 500;
+                color: white
+            }
+
+            .logo {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .side {
+                display: block;
+            }
+
+            .nav {
+                height: 10vh;
+                position: relative;
+            }
+
+            .side .material-symbols-outlined {
+                font-size: 2.6rem;
+                font-weight: 600;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            .sidebar {
+            
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: #fff;
+                padding: 10px;
+            }
+
+            #close {
+                cursor: pointer;
+                font-size: 2.3rem;
+            }
+
+            .sidebar-links {
+                display: block;
+                margin-top: 20%;
+                text-align: center;
+
+            }
+
+            .sidebar-links li {
+                font-size: 2.3rem;
+                padding: 1.2rem 1.5rem;
+
+            }
+
+            .sidebar-links li:hover {
+                background-color: #837b7b;
+                color: #fff;
+                cursor: pointer;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            
+            #home,
+            #About,
+            #course,
+            #quiz,
+            #contact {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .material-symbols-outlined {
+                font-size: 2.5rem;
+                margin-top: 11px;
+                font-weight: 600;
+            }
+
+
+            .footitems {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 25px;
+            }
+
+            html::-webkit-scrollbar,
+            body::-webkit-scrollbar {
+                display: none;
+            }
+
+             .main {
+        flex-direction: column-reverse;
+        padding: 3rem 1.5rem;
+        text-align: center;
+        gap: 30px;
+    }
+
+    a {
+            text-decoration: none;
+            color: inherit;
+            font-family: inherit;
+        }
+
+    .main .left h1 {
+        font-size: 2rem;
+    }
+
+    .main .left p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .main .right img {
+        max-width: 90%;
+    }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="/Source/images/logo.png" alt="logo">
+            <p class="brandname">WEB-HOB</p>
+        </div>
+        <div class="links">
+            <li><a href="/html/index.html">Home</a></li>
+            <li><a href="/html/about.html">About</a></li>
+            <li><a href="/html/Course.html">Courses</a></li>
+            <li><a href="/html/quiz.html">Quiz</a></li>
+           
+        </div>
+        <div class="b1">
+            
+            <button>
+                
+                <div>
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+                <div>
+                    <a href="/html/user.html">
+                    <p>User Profile</p>
+                    </a>
+                </div>
+                
+            </button>
+        </div>
+        <div class="side">
+            <span class="material-symbols-outlined" id="menu">
+                menu
+            </span>
+        </div>
+    </div>
+
+    <aside class="sidebar">
+        <span class="material-symbols-outlined close-btn" id="close">close</span>
+        <ul class="sidebar-links">
+            <li id="home">
+                <div> <span class="material-symbols-outlined">Home</span></div>
+                <div>
+                    <p><a href="/html/index.html">Home</a></p>
+                </div>
+            </li>
+            <li id="About">
+                <div> <span class="material-symbols-outlined">info</span></div>
+                <div>
+                    <p><a href="/html/about.html">About</a></p>
+                </div>
+            </li>
+            <li id="course">
+                <div> <span class="material-symbols-outlined">School</span></div>
+                <div>
+                    <p><a href="/html/Course.html">Courses</a></p>
+                </div>
+            </li>
+
+
+            <li id="quiz">
+                <div> <span class="material-symbols-outlined">quiz</span></div>
+                <div>
+                    <p><a href="/html/quiz.html">Quiz</a></p>
+                </div>
+            </li>
+
+            
+        </ul>
+    </aside>
+
+
+
+    <div class="main">
+        <div class="left">
+            <h1> Welcome to <span>WEB-HOB</span></h1>
+            
+            <br>
+            <p>
+    WEB-HOB is a free educational platform created to help students
+    learn, practice, and improve their skills. Explore our collection
+    of lectures covering important concepts, learn at your own pace,
+    and put your knowledge to the test through interactive quizzes.
+    Whether you are starting from the basics or strengthening what
+    you already know, WEB-HOB provides a simple and engaging way to
+    continue your learning journey.
+</p>
+            </p><br>
+            <button><a href="/html/signup.html">Explore</a></button>
+        </div>
+        <div class="right">
+            <img src="/Source/images/home2.jpg" alt="homeimage">
+        </div>
+    </div>
+
+
+    <footer id="ft">
+        <div class="cp">
+            <h3>WEB-HOB</h3>
+            <p>Your ultimate destination for interactive learning, expert-led courses, and knowledge testing. Elevate
+                your skills with us.</p>
+        </div>
+
+        <div class="footitems">
+            <div class="item">
+                <ul>
+                    <h4>Links</h4>
+            <li><a href="/html/index.html">Home</a></li>
+            <li><a href="/html/about.html">About</a></li>
+            <li><a href="/html/Course.html">Courses</a></li>
+            <li><a href="/html/quiz.html">Quiz</a></li>
+            <li><a href="#">Contact</a></li>
+                </ul>
+            </div><a href="/html/Course.html"></a>
+            <div class="item">
+                <ul>
+                    <h4>Learnings</h4>
+                    <li><a href="/html/Course.html">HTML</a></li>
+                    <li><a href="/html/Course.html">CSS</a></li>
+                    <li><a href="/html/Course.html">JavaScript</a></li>
+                    <li><a href="/html/Course.html">Python</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <ul>
+                    <h4>Quick Actions</h4>
+                    <li>Support</li>
+                    <li>FAQ</li>
+                    <li>Contact</li>
+                    <li>Follow us</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cp">
+            <p>&copy; 2026 WEB-HOB. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    <script>
+        let menu = document.querySelector("#menu");
+        let close = document.querySelector("#close");
+        let sidebar = document.querySelector(".sidebar");
+
+        menu.addEventListener("click", function () {
+            sidebar.style.display = "block";
+        });
+
+        close.addEventListener("click", function () {
+            sidebar.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>

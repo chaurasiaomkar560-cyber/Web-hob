@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(45deg, #fada61 0.000%, #ff9188 50.000%, #ff5acd 100.000%);
+
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+         a {
+            text-decoration: none;
+            color: inherit;
+            font-family: inherit;
+        }
+
+        .item {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border-radius: 20px;
+            background-color: #fff;
+            margin: 10px 0px;
+            box-shadow:
+                0 10px 25px rgba(255, 90, 205, 0.25),
+                0 5px 15px rgba(255, 145, 136, 0.20),
+                0 2px 8px rgba(250, 218, 97, 0.18);
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            margin: 9px 25px;
+        }
+
+        .options p {
+            margin: 0px 7px;
+        }
+
+        input[type="radio"] {
+            width: 20px;
+            height: 0.9rem;
+        }
+
+        input[type="radio"]:checked {
+            accent-color: black;
+        }
+
+        .def {
+            font-weight: 500;
+        }
+
+        @media (max-width:768px) {
+
+            h2 {
+                font-size: 0.9rem;
+            }
+
+            .opt {
+                font-size: 0.9rem;
+                font-weight: 490;
+            }
+
+            .b1 {
+                text-align: center;
+                margin: 25px 30px;
+                display: grid;
+                gap: 9px;
+                grid-template-rows: repeat(1fr, 1fr);
+            }
+        }
+
+        .b1 {
+            text-align: center;
+            margin: 25px 30px;
+
+        }
+
+        .b1 button {
+            padding: 18px 2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 10px;
+            border: none;
+
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #ff5acd;
+            box-shadow: 0 8px 20px rgba(255, 90, 205, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .b1 button:hover {
+
+            background-color: #ff5acd;
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(255, 90, 205, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+
+
+            <!-- item 1 -->
+            <div class="item" data-q="q1">
+                <h2 id="question">Q1) What is the default value of a local variable in Java?</h2>
+
+                <label class="options">
+                    <input type="radio" name="q1" id="op" value="0" required>
+                    <p class="opt">0
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+                    <input type="radio" name="q1" id="op" value="null">
+                    <p class="opt">null
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+
+                    <input type="radio" name="q1" id="op" value="No default value (Compiler Error)">
+                    <p class="opt">No default value (Compiler Error)
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+
+                    <input type="radio" name="q1" id="op" value="Depends on data type">
+                    <p class="opt">Depends on data type
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+                <p class="def"></p>
+            </div>
+
+
+
+
+            <!-- item 2 -->
+            <div class="item" data-q="q2">
+                <h2 id="question">Q2) Which component is responsible for converting Java bytecode into machine-specific
+                    code?</h2>
+                <label for="" class="options">
+
+                    <input type="radio" name="q2" value="JDK" required>
+                    <p class="opt">JDK
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+                    <input type="radio" name="q2" value="JVM">
+                    <p class="opt">JVM
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+                    <input type="radio" name="q2" value="JRE">
+                    <p class="opt">JRE
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+                    <input type="radio" name="q2" value="Compiler">
+                    <p class="opt">Compiler
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+                <p class="def"></p>
+            </div>
+
+
+            <!-- item 3 -->
+            <div class="item" data-q="q3">
+                <h2 id="question">Q3) Which of these is not a feature of Java ? </h2>
+                <label for="" class="options">
+
+                    <input type="radio" name="q3" value="Object-Oriented" required>
+                    <p class="opt">Object-Oriented
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+                    <input type="radio" name="q3" value="Use of pointers">
+                    <p class="opt">Use of pointers
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+                    <input type="radio" name="q3" value="Dynamic">
+                    <p class="opt">Dynamic
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+                    <input type="radio" name="q3" value="Platform Independent">
+                    <p class="opt">Platform Independent
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+                <p class="def"></p>
+            </div>
+
+            <!-- item 4 -->
+            <div class="item" data-q="q4">
+                <h2 id="question">Q4) What is the size of an 'int' data type in Java?</h2>
+                <label for="" class="options">
+
+                    <input type="radio" name="q4" value="1 byte" required>
+                    <p class="opt">1 byte
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+                    <input type="radio" name="q4" value="2 bytes">
+                    <p class="opt">2 bytes
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+                    <input type="radio" name="q4" value="4 bytes">
+                    <p class="opt">4 bytes
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+
+                <label class="options">
+                    <input type="radio" name="q4" value="Compiler">
+                    <p class="opt">8 bytes
+                    <p class="emogi"></p>
+                    </p>
+                </label>
+                <p class="def"></p>
+            </div>
+
+            <!-- item 5 -->
+            <div class="item" data-q="q5">
+                <h2 id="question">Q5 ) Which keyword is used to inherit a class in Java?</h2>
+
+                <label class="options">
+                    <input type="radio" name="q5" value="implements" required>
+                    <p class="opt">implements</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q5" value="extends">
+                    <p class="opt">extends</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q5" value="inherits">
+                    <p class="opt">inherits</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q5" value="import">
+                    <p class="opt">import</p>
+                    <p class="emogi"></p>
+                </label>
+                <p class="def"></p>
+            </div>
+
+
+
+            <!-- item 6 -->
+            <div class="item" data-q="q6">
+                <h2 id="question">Q6 ) What does the 'final' keyword mean when applied to a class?</h2>
+
+                <label class="options">
+                    <input type="radio" name="q6" value="The class cannot be instantiated." required>
+                    <p class="opt">The class cannot be instantiated.</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q6" value="The class cannot be inherited.">
+                    <p class="opt">The class cannot be inherited.</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q6" value="The class methods cannot be overloaded.">
+                    <p class="opt">The class methods cannot be overloaded.</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q6" value="The class cannot have variables.">
+                    <p class="opt">The class cannot have variables.</p>
+                    <p class="emogi"></p>
+                </label>
+                <p class="def"></p>
+            </div>
+
+            <!-- item 7 -->
+            <div class="item" data-q="q7">
+                <h2 id="question">Q7 ) Which method is the entry point for any Java console application?</h2>
+
+                <label class="options">
+                    <input type="radio" name="q7" value="public void main(String[] args)" required>
+                    <p class="opt">public void main(String[] args)</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q7" value="public static void main(String args[])">
+                    <p class="opt">public static void main(String args[])</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q7" value="private static void main(String[] args)">
+                    <p class="opt">private static void main(String[] args)</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q7" value="void main()">
+                    <p class="opt">void main()</p>
+                    <p class="emogi"></p>
+                </label>
+                <p class="def"></p>
+            </div>
+
+            <!-- item 8 -->
+            <div class="item" data-q="q8">
+                <h2 id="question">Q8 ) Which of these loops is guaranteed to execute at least once?</h2>
+
+                <label class="options">
+                    <input type="radio" name="q8" value="for loop" required>
+                    <p class="opt">for loop</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q8" value="while loop">
+                    <p class="opt">while loop</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q8" value="do-while loop">
+                    <p class="opt">do-while loop</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q8" value="for-each loop">
+                    <p class="opt">for-each loop</p>
+                    <p class="emogi"></p>
+                </label>
+                <p class="def"></p>
+            </div>
+            <!-- item 9 -->
+            <div class="item" data-q="q9">
+                <h2 id="question">Q9 ) What is the superclass of all classes in Java?</h2>
+
+                <label class="options">
+                    <input type="radio" name="q9" value="String" required>
+                    <p class="opt">String</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q9" value="Object">
+                    <p class="opt">Object</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q9" value="Main">
+                    <p class="opt">Main</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q9" value="Class">
+                    <p class="opt">Class</p>
+                    <p class="emogi"></p>
+                </label>
+                <p class="def"></p>
+            </div>
+            <!-- item 10 -->
+            <div class="item" data-q="q10">
+                <h2 id="question">Q10 ) Which memory area holds the local variables in Java?</h2>
+
+                <label class="options">
+                    <input type="radio" name="q10" value="Heap Memory" required>
+                    <p class="opt">Heap Memory</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q10" value="Stack Memory">
+                    <p class="opt">Stack Memory</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q10" value="Class Area">
+                    <p class="opt">Class Area</p>
+                    <p class="emogi"></p>
+                </label>
+                <label class="options">
+                    <input type="radio" name="q10" value="Method Area">
+                    <p class="opt">Method Area</p>
+                    <p class="emogi"></p>
+                </label>
+                <p class="def"></p>
+            </div>
+
+            <div class="b1">
+                <Button  type="submit">Submit</Button>
+                <button id="Close" type="button">  <a href="/html/quiz.html">Back</a></button>
+
+            </div>
+        </div>
+    </form>
+
+    <script>
+
+        let inp = document.querySelector(".container");
+        let form = document.querySelector("form");
+        let b1 = document.querySelector("#btn");
+
+        let userinp = {};
+        let count=0;
+
+        const correctAns = {
+            "q1": "No default value (Compiler Error)",
+            "q2": "JVM",
+            "q3": "Use of pointers",
+            "q4": "4 bytes",
+            "q5": "extends",
+            "q6": "The class cannot be inherited.",
+            "q7": "public static void main(String args[])",
+            "q8": "do-while loop",
+            "q9": "Object",
+            "q10": "Stack Memory"
+        };
+
+
+
+        form.addEventListener("change", function (event) {
+            const tar = event.target;
+
+            if (tar.type === "radio") {
+                userinp[tar.name] = tar.value;
+            }
+        });
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let items = document.querySelectorAll("input[type='radio']");
+
+            items.forEach(radio => { radio.setAttribute("disabled", "true") });
+
+            for (key in userinp) {
+
+                let questionno = document.querySelector(`.item[data-q="${key}"]`);
+                let def = questionno.querySelector(".def");
+
+
+
+
+                let usans = userinp[key];
+                let cans = correctAns[key];
+
+
+                let select = questionno.querySelector(`input[name="${key}"][value="${usans}"]`);
+                let emogi = select.parentElement.querySelector(".emogi");
+
+
+                if (usans === cans) {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "✅";
+                    count++;
+                } else {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "❌";
+            
+
+                }
+            }
+            alert(` Congratulation You have Scored ${count} Out Of 10 `);
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(45deg, #fada61 0.000%, #ff9188 50.000%, #ff5acd 100.000%);
+
+        }
+
+         a {
+            text-decoration: none;
+            color: inherit;
+            font-family: inherit;
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .item {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border-radius: 20px;
+            background-color: #fff;
+            margin: 10px 0px;
+            box-shadow:
+                0 10px 25px rgba(255, 90, 205, 0.25),
+                0 5px 15px rgba(255, 145, 136, 0.20),
+                0 2px 8px rgba(250, 218, 97, 0.18);
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            margin: 9px 25px;
+        }
+
+        .options p {
+            margin: 0px 7px;
+        }
+
+        input[type="radio"] {
+            width: 20px;
+            height: 0.9rem;
+        }
+
+        input[type="radio"]:checked {
+            accent-color: black;
+        }
+
+        .def {
+            font-weight: 500;
+        }
+
+        @media (max-width:768px) {
+
+            h2 {
+                font-size: 0.9rem;
+            }
+
+            .opt {
+                font-size: 0.9rem;
+                font-weight: 490;
+            }
+
+            .b1 {
+                text-align: center;
+                margin: 25px 30px;
+                display: grid;
+                gap: 9px;
+                grid-template-rows: repeat(1fr, 1fr);
+            }
+        }
+
+        .b1 {
+            text-align: center;
+            margin: 25px 30px;
+
+        }
+
+        .b1 button {
+            padding: 18px 2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 10px;
+            border: none;
+
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #ff5acd;
+            box-shadow: 0 8px 20px rgba(255, 90, 205, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .b1 button:hover {
+
+            background-color: #ff5acd;
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(255, 90, 205, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+
+
+            <div class="item" data-q="q1">
+    <h2 id="question">Q1) How many layers are there in the OSI model?</h2>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="4" required>
+        <p class="opt">4
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="5">
+        <p class="opt">5
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="7">
+        <p class="opt">7
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q1" id="op" value="8">
+        <p class="opt">8
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q2">
+    <h2 id="question">Q2) What does IP stand for in networking?</h2>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="Internal Protocol" required>
+        <p class="opt">Internal Protocol
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="Internet Protocol">
+        <p class="opt">Internet Protocol
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="Intranet Process">
+        <p class="opt">Intranet Process
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q2" id="op" value="Instant Portal">
+        <p class="opt">Instant Portal
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q3">
+    <h2 id="question">Q3) Which protocol is used to securely browse websites (encrypted traffic)?</h2>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="HTTP" required>
+        <p class="opt">HTTP
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="FTP">
+        <p class="opt">FTP
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="HTTPS">
+        <p class="opt">HTTPS
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q3" id="op" value="SMTP">
+        <p class="opt">SMTP
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q4">
+    <h2 id="question">Q4) What is the size of an IPv4 address?</h2>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="32 bits" required>
+        <p class="opt">32 bits
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="64 bits">
+        <p class="opt">64 bits
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="128 bits">
+        <p class="opt">128 bits
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q4" id="op" value="16 bits">
+        <p class="opt">16 bits
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q5">
+    <h2 id="question">Q5) Which layer of the OSI model is responsible for routing packets?</h2>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="Transport Layer" required>
+        <p class="opt">Transport Layer
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="Data Link Layer">
+        <p class="opt">Data Link Layer
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="Network Layer">
+        <p class="opt">Network Layer
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q5" id="op" value="Physical Layer">
+        <p class="opt">Physical Layer
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q6">
+    <h2 id="question">Q6) Which device is used to connect multiple distinct networks together?</h2>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="Hub" required>
+        <p class="opt">Hub
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="Switch">
+        <p class="opt">Switch
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="Router">
+        <p class="opt">Router
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q6" id="op" value="Repeater">
+        <p class="opt">Repeater
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q7">
+    <h2 id="question">Q7) What does DNS stand for?</h2>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="Domain Name System" required>
+        <p class="opt">Domain Name System
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="Dynamic Network Server">
+        <p class="opt">Dynamic Network Server
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="Distributed Number Service">
+        <p class="opt">Distributed Number Service
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q7" id="op" value="Data Network Storage">
+        <p class="opt">Data Network Storage
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q8">
+    <h2 id="question">Q8) Which network topology connects all devices to a single central cable?</h2>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="Star Topology" required>
+        <p class="opt">Star Topology
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="Ring Topology">
+        <p class="opt">Ring Topology
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="Mesh Topology">
+        <p class="opt">Mesh Topology
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q8" id="op" value="Bus Topology">
+        <p class="opt">Bus Topology
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q9">
+    <h2 id="question">Q9) Which port number is standard for HTTP traffic?</h2>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="21" required>
+        <p class="opt">21
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="80">
+        <p class="opt">80
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="443">
+        <p class="opt">443
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q9" id="op" value="25">
+        <p class="opt">25
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+
+<div class="item" data-q="q10">
+    <h2 id="question">Q10) What protocol translates private IP addresses inside a local network to a public IP address?</h2>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="DHCP" required>
+        <p class="opt">DHCP
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="NAT">
+        <p class="opt">NAT
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="ARP">
+        <p class="opt">ARP
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <label class="options">
+        <input type="radio" name="q10" id="op" value="ICMP">
+        <p class="opt">ICMP
+        <p class="emogi"></p>
+        </p>
+    </label>
+
+    <p class="def"></p>
+</div>
+
+            <div class="b1">
+                <Button type="submit">Submit</Button>
+                <button id="Close" type="button">  <a href="/html/quiz.html">Back</a></button>
+
+            </div>
+        </div>
+    </form>
+
+    <script>
+
+        let inp = document.querySelector(".container");
+        let form = document.querySelector("form");
+        let b1 = document.querySelector("#btn");
+
+        let userinp = {};
+
+        const correctAns = {
+            "q1": "7",
+            "q2": "Internet Protocol",
+            "q3": "HTTPS",
+            "q4": "32 bits",
+            "q5": "Network Layer",
+            "q6": "Router",
+            "q7": "Domain Name System",
+            "q8": "Bus Topology",
+            "q9": "80",
+            "q10": "NAT"
+        };
+
+
+
+        form.addEventListener("change", function (event) {
+            const tar = event.target;
+
+            if (tar.type === "radio") {
+                userinp[tar.name] = tar.value;
+            }
+        });
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let items = document.querySelectorAll("input[type='radio']");
+
+            items.forEach(radio => { radio.setAttribute("disabled", "true") });
+
+            for (key in userinp) {
+
+                let questionno = document.querySelector(`.item[data-q="${key}"]`);
+                let def = questionno.querySelector(".def");
+
+
+
+
+                let usans = userinp[key];
+                let cans = correctAns[key];
+
+
+                let select = questionno.querySelector(`input[name="${key}"][value="${usans}"]`);
+                let emogi = select.parentElement.querySelector(".emogi");
+
+
+                if (usans === cans) {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "✅";
+                } else {
+                    def.textContent = `Correct Answer : ${cans}`;
+                    def.style.color = "green";
+                    emogi.textContent = "❌";
+
+                }
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

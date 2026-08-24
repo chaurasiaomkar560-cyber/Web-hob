@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WEB-HOB | Login</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif}
+body{min-height:100vh;display:flex;justify-content:center;align-items:center;background:azure;padding:30px}
+.container{width:100%;max-width:500px;background:rgba(255,255,255,.95);padding:35px;border-radius:20px;box-shadow:0 20px 50px rgba(15,23,42,.12);border:1px solid #e5e7eb}
+.heading{text-align:center;margin-bottom:30px}
+.heading h1{font-size:2rem;color:rgb(190,90,190);margin-bottom:8px}
+.heading p{color:#64748b;font-size:.95rem}
+.form-group{margin-bottom:20px}
+label{display:block;margin-bottom:7px;font-size:.95rem;font-weight:600;color:#374151}
+input[type="email"],input[type="password"]{width:100%;padding:13px 14px;border:1px solid #d1d5db;border-radius:10px;outline:none;font-size:1rem;transition:.3s;background:#fff}
+input:focus{border-color:#dc81dc;box-shadow:0 0 0 3px rgba(220,129,220,.15)}
+.error{display:block;color:#dc2626;font-size:.82rem;margin-top:5px;min-height:18px}
+input[type="submit"]{width:100%;padding:14px;margin-top:10px;border:none;border-radius:10px;background:rgb(220,129,220);color:#fff;font-size:1rem;font-weight:600;cursor:pointer;transition:.3s}
+input[type="submit"]:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(220,129,220,.3)}
+.register{text-align:center;margin-top:20px;color:#64748b;font-size:.95rem}
+.register a{color:rgb(190,90,190);font-weight:600;text-decoration:none}
+.register a:hover{text-decoration:underline}
+@media(max-width:500px){
+body{padding:15px}
+.container{padding:25px 20px}
+.heading h1{font-size:1.7rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="heading">
+<h1>Login Page</h1>
+<p>Login to continue your learning journey.</p>
+</div>
+
+<form id="loginForm">
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" placeholder="Enter your email">
+<span class="error" id="emailError"></span>
+</div>
+
+<div class="form-group">
+<label for="pass">Password</label>
+<input type="password" id="pass" placeholder="Enter your password">
+<span class="error" id="passError"></span>
+</div>
+
+<input type="submit" value="Login">
+
+<div class="register">
+<p>Don't have an account? <a href="signup.html">Create Account</a></p>
+</div>
+</form>
+</div>
+
+<script>
+const form=document.querySelector("#loginForm");
+
+form.addEventListener("submit",function(event){
+event.preventDefault();
+
+document.querySelector("#emailError").textContent="";
+document.querySelector("#passError").textContent="";
+
+let email=document.querySelector("#email").value.trim();
+let password=document.querySelector("#pass").value;
+
+let valid=true;
+
+if(email===""){
+document.querySelector("#emailError").textContent="Email cannot be empty.";
+valid=false;
+}
+
+if(password===""){
+document.querySelector("#passError").textContent="Password cannot be empty.";
+valid=false;
+}
+
+if(!valid){
+return;
+}
+
+let users=JSON.parse(localStorage.getItem("users"))||[];
+
+let user=users.find(function(user){
+return user.email.toLowerCase()===email.toLowerCase()&&user.password===password;
+});
+
+if(user){
+localStorage.setItem("currentUser",JSON.stringify(user));
+window.location.href="index.html";
+}else{
+document.querySelector("#passError").textContent="Invalid email or password.";
+}
+});
+</script>
+</body>
+</html>
